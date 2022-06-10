@@ -8,4 +8,8 @@ class BakedGood < ActiveRecord::Base
     self.all.order(price: :desc)
   end
 
+  def self.most_expensive
+    self.all.order(price: :desc).first
+  end
+
 end
